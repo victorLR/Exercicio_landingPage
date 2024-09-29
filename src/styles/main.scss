@@ -1,5 +1,94 @@
-$bgcolor:black;
+@use 'variaveis';
+@use 'header';
+@use 'SectionQuests';
+@use 'footer';
+@use 'media';
 
-body{
-    background-color: $bgcolor;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: variaveis.$corDeFundo;
+  font-family: sans-serif;
+}
+
+
+
+
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+  @include text($fontSize);
+  color: variaveis.$corTextoSecundario;
+}
+
+
+.title {
+  @include title;
+}
+
+.title--big {
+  @include title(44px);
+  color: variaveis.$corTextoPrincipal
+
+}
+
+.text {
+  @include text;
+}
+
+.text--big {
+  @include text(18px);
+}
+
+.text--small {
+  @include text(12px);
+}
+
+
+.about-film {
+  padding: 500px 0; 
+  padding-bottom: 0;
+}
+
+.text__h1 {
+  text-align: center;
+  padding-top: 5vh; 
+  font-family: spiderFont;
+  font-weight: 500;
+}
+
+
+.box__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 200px;
+  gap: 30px; 
+  padding-top: 80px; 
+  
+  &__film__image {
+    width: 100%; 
+    height: 300px;
+    width: 500px;
+    border-radius: 8px;
+  }
+}
+
+.box__text__film__image__description {
+  max-width: 500px;
+  color: variaveis.$corTextoPrincipal;
+  padding-left: 20px; 
+  font-family: sans-serif;
+  max-width: 400px;
+}
+
+
