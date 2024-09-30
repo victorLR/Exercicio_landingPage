@@ -2,11 +2,17 @@
 
 
 @media (max-width: 768px) {
-  header {
+  
+    html,body {
+        overflow-x: hidden;
+    }
+
+    header {
     display: flex;          
     flex-direction: column; 
     align-items: center;   
     justify-content: flex-start;
+    
 
     .box__logo {
         display: none;
@@ -24,7 +30,7 @@
 
     .video-controls {
       position: absolute;
-      top: 110px;
+      top: 150px;
       left: 77%;
       transform: translateX(-50%);
       display: flex;
@@ -94,6 +100,7 @@
             padding-top: 24px;
             &__film__image{
                 width: 430px;
+                
                 &__description{
                     text-align:start;
                     line-height: 1.4;
@@ -109,17 +116,17 @@
 
 @media (max-width: 768px) {
 .quest{
-    max-height: 900px;
+    max-height: 1850px;
     .title--big{
         font-size: 28px;
         
     }
-
+    
     .quest__link__curiosities__item{
         font-size: 18px;
         &__questions{
             font-size: 12px;
-            height: 247px;
+            height: 500px;
         }
     }
 }
@@ -127,7 +134,10 @@
 
 @media (max-width: 768px){
     .footer{
-        margin: 150px auto 10px;
+            position: relative;
+            z-index: 10;
+        
+        
     }
 }
 
